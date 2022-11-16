@@ -3,7 +3,6 @@ Badge em Desenvolvimento
 
 Repositório para a entrega do trabalho final em Projeto Interdiciplinar I da Universidade Católica de Brasília.
 Professora Responsavel pela matéria: Joyce Siqueira  [GitHub](https://github.com/joycitta-siqueira)
-Alunos
 
 | Alunos | Curso |
 | --- | --- |
