@@ -17,4 +17,4 @@ Professora Responsavel pela matéria: Joyce Siqueira  [GitHub](https://github.co
 <h4 align="justify"><p>A Ideia é criar um site de apostas seguro,rápido e prático.Onde o apostador pode se divertir e ganhar dinheiro ao mesmo tempo.
  
  
-<p>Público-alvo: O público alvo é apartir de 18 anos até senhores de idade que gostam de apostas.
+<p>Público-alvo: O público alvo é apartir de 18 anos até senhores de idade que gostam de apostar.
