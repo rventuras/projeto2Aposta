@@ -1,5 +1,4 @@
 APP DE APOSTAS 
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
 Repositório para a entrega do trabalho final em Projeto Interdiciplinar I da Universidade Católica de Brasília.
 Professora Responsavel pela matéria: Joyce Siqueira  [GitHub](https://github.com/joycitta-siqueira)
