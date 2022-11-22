@@ -1,116 +1,143 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <locale.h>
 
-int main()
-{
-    int opcaoCadastro = 2;
-    int opcaoLogin = 1;
-    int opcao;
-    char nome[50], nomeDeUsuario[50], sobrenome[50], senha[50], email[50], cpf[50], telefone[50], endereco[50], 
-    cidade[50], estado[50], cep[50], pais[50], data[50], sexo[50];
+int main(){
+    setlocale(LC_ALL, "Portuguese");
 
+    int opcao, opcaoCadastro, opcaologin;
+    float saldo = 589.25;
+    char nomeLogin[50], senhaLogin[50];
+    char nomeCadastro[50], sobrenomeCadastro[50], cpfCadastro[50], 
+    emailCadastro[50], dataNascCadastro[50], sexoCadastro[1],
+    nomeUserCadastro[50], senhaCadastro[50], telefoneCadastro[50];
 
     printf("Bem-vindo a DiamondBet, o melhor site de apostas do Brasil!\n");
-    printf("Ja possui cadastro em nosso site? \n");
-    printf("1 - Sim \n");
-    printf("2 - Nao \n");
-    printf("Digite a opcao desejada: ");
+    printf("Escolha uma das opções abaixo:\n 1 - Login na plataforma \n 2 - Cadastro na plataforma");
+    printf("Digite a opção desejada: \n");
     scanf("%d", &opcao);
 
-    if(opcao == opcaoLogin){
-        printf("Digite seu nome de usuario: \n");
-        scanf("%s", &nome);
+    switch (opcao){
+        case 1:
+        printf("Página de login DiamondBet\n\n");
         fflush(stdin);
+
+        printf("Digite seu nome de usuário: \n");
+        gets(nomeLogin);
+
+
         printf("Digite sua senha: \n");
-        scanf("%s", &senha);
+        gets(senhaLogin);
         fflush(stdin);
+
         printf("Login realizado com sucesso!\n");
-        printf("Bem-vindo, %s!\n", nome);
+        printf("Bem-vindo, %s! Escolha uma das opções abaixo\n", nomeLogin);
+        printf("1 - Apostar\n");
+        printf("2 - Verificar saldo\n");
+        printf("3 - Verificar histórico de apostas\n");
+        printf("4 - Conta\n");
+        printf("5 - Sair\n");
+        printf("Digite a opção desejada");
+        scanf("%d", &opcaologin);
 
-    } else if (opcao == opcaoCadastro){
+        switch (opcaologin){
+            case 1:
+            printf("Apostar\n");
+            break;
 
-        printf("VAMOS COMECAR PELOS SEUS DADOS PESSOAIS\n");
+            case 2:
+            printf("Seu saldo é de R$%2.f\n", saldo);
+            break;
 
-        printf("Qual o seu nome? \n");
-        scanf("%s", &nome);
+            case 3:
+            printf("Histórico de apostas\n\n");
+            printf("Nenhuma aposta realizada\n");
+            break;
+
+            case 4:
+            printf("Conta\n\n");
+            printf("Nome: %s\n", nomeLogin);
+            printf("Nível de apostador: Elite\n");
+            printf("Saldo: R$%2.f\n", saldo);
+            break;
+
+            case 5:
+            printf("Você saiu da sua conta DiamondBet\n");
+            break;
+
+            default:
+            printf("Opção inválida\n");
+            break;
+        }
+
+        break;
+
+        case 2:
+        printf("Página de cadastro DiamondBet\n\n");
         fflush(stdin);
 
-        printf("E seu sobremone? \n");
-        scanf("%s", &nome);
+        printf("Digite seu nome: \n");
+        gets(nomeCadastro);
+        
+
+        printf("Digite seu sobrenome: \n");
+        gets(sobrenomeCadastro);
         fflush(stdin);
         
-        printf("Digite sua data de nascimento: \n");
-        scanf("%s", &data);
+
+        printf("Digite sua data de nascimento: DD/MM/AAAA \n");
+        gets(dataNascCadastro);
         fflush(stdin);
 
-        printf("Digite seu sexo: \n");
-        scanf("%s", &sexo);
-        fflush(stdin);
-
-        printf("Agora digite um nome de usuario: \n");
-        scanf("%s", &nomeDeUsuario);
-        fflush(stdin);
-        
-        printf("Digite seu melhor email: \n");
-        scanf("%s", &email);
-        fflush(stdin);
-
-        printf("Por fim crie uma senha: \n");
-        scanf("%s", &senha);
-        fflush(stdin);
-
-        printf("SEGUIREMOS AGORA COM SEUS DADOS CADASTRAIS!\n");
+        printf("Sexo: 'M' ou 'F'\n");
+        gets(sexoCadastro);
 
         printf("Digite seu CPF: \n");
-        scanf("%s", &cpf);
+        gets(cpfCadastro);
         fflush(stdin);
 
-        printf("Digite seu telefone com o DDD: \n");
-        scanf("%s", &telefone);
+        printf("Digite seu e-mail: \n");
+        gets(emailCadastro);
         fflush(stdin);
+
+        printf("Digite seu número de telefone com o DDD: \n");
+        gets(telefoneCadastro);
+        fflush(stdin);
+
+        printf("Crie um nome de usuário: \n");
+        gets(nomeUserCadastro);
+        fflush(stdin);
+
+        printf("Crie uma senha: \n");
+        gets(senhaCadastro);
+
+        printf("Confirme seus dados: \n");
+
         
-        printf("Digite seu pais: \n");
-        scanf("%s", &pais);
-        fflush(stdin);
-        
-        printf("Digite seu estado: \n");
-        scanf("%s", &estado);
-        fflush(stdin);
-        
-        printf("Digite sua cidade: \n");
-        scanf("%s", &cidade);
-        fflush(stdin);
+        printf("\n Nome: %s\n", nomeCadastro);
+        printf("\n Sobrenome: %s\n", sobrenomeCadastro);
+        printf("\n Data de nascimento: %s\n", dataNascCadastro);
+        printf("\n Sexo: %s\n", sexoCadastro);
+        printf("\n CPF: %s\n", cpfCadastro);
+        printf("\n E-mail: %s\n", emailCadastro);
+        printf("\n Telefone: %s\n", telefoneCadastro);
+        printf("\n Nome de usuário: %s\n", nomeUserCadastro);
 
-        printf("Digite seu endereco: \n");
-        scanf("%s", &endereco);
-        fflush(stdin);
+        printf("Digite 1 para confirmar ou 2 para cancelar: \n");
+        scanf("%d", &opcaoCadastro);
 
-        printf("Digite seu CEP: \n");
-        scanf("%s", &cep);
-        fflush(stdin);
+        if(opcaoCadastro == 1){
+            printf("Cadastro realizado com sucesso!\n");
+        } else {
+            printf("Cadastro cancelado!\n");
+        }
 
-        printf("Cadastro realizado com sucesso!\n");
-    } else {
-        printf("Opcao invalida!\n");
+        default: 
+        printf("Opção inválida! \n");
     }
 
-
-       
-} 
+}
 
 
 
-
-
-
-
-
-
-
-
-
-/*aposta[50],
-     valor[50], dataaposta[50], horario[50], time[50], time2[50], time3[50], time4[50],
-      time5[50], time6[50], time7[50], time8[50], time9[50], time10[50], time11[50],
-       time12[50], time13[50], time14[50], time15[50], time16[50], time17[50], time18[50]*/
