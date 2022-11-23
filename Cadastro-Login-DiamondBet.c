@@ -13,14 +13,14 @@ int main(){
     emailCadastro[50], dataNascCadastro[50], sexoCadastro[1],
     nomeUserCadastro[50], senhaCadastro[50], telefoneCadastro[50];
 
-    printf("Bem-vindo a DiamondBet, o melhor site de apostas do Brasil!\n");
+    printf("Bem-vindo a IceSports, o melhor site de apostas do Brasil!\n");
     printf("Escolha uma das opções abaixo:\n 1 - Login na plataforma \n 2 - Cadastro na plataforma");
     printf("Digite a opção desejada: \n");
     scanf("%d", &opcao);
 
     switch (opcao){
         case 1:
-        printf("Página de login DiamondBet\n\n");
+        printf("Página de login IceSports\n\n");
         fflush(stdin);
 
         printf("Digite seu nome de usuário: \n");
@@ -74,7 +74,7 @@ int main(){
         break;
 
         case 2:
-        printf("Página de cadastro DiamondBet\n\n");
+        printf("Página de cadastro IceSports\n\n");
         fflush(stdin);
 
         printf("Digite seu nome: \n");
